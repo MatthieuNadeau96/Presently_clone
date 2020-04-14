@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './widgets/day_card.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -22,9 +24,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,9 +56,11 @@ class MyHomePage extends StatelessWidget {
         ],
       ),
       backgroundColor: Theme.of(context).primaryColor,
-      body: Center(
-        child: Text('Hello'),
-      ),
+      body: ListView.builder(
+          itemCount: 5,
+          itemBuilder: (BuildContext context, int index) {
+            return DayCard();
+          }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(
