@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xffDBD1C7),
         accentColor: Colors.black,
         primaryTextTheme: TextTheme(
-          title: TextStyle(color: Theme.of(context).primaryColor),
+          title: TextStyle(
+            color: Color(0xff89827C),
+          ),
         ),
       ),
       home: MyHomePage(),
@@ -57,7 +59,7 @@ class MyHomePage extends StatelessWidget {
       ),
       backgroundColor: Theme.of(context).primaryColor,
       body: ListView.builder(
-          itemCount: 5,
+          itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
             return DayCard();
           }),
