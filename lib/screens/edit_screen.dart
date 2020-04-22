@@ -24,19 +24,13 @@ class EditScreen extends StatelessWidget {
                   Container(
                     child: Text(
                       'Today',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.display2,
                     ),
                   ),
                   Container(
                     child: Text(
                       'I am grateful for',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.display2,
                     ),
                   ),
                 ],
@@ -57,8 +51,8 @@ class EditScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         labelText: 'What are you grateful for?',
                         labelStyle: TextStyle(
+                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
-                          // fontFamily: 'Trajan Pro',
                           color: Color(0xff89827C),
                         ),
                         border: InputBorder.none,
@@ -91,7 +85,7 @@ class EditScreen extends StatelessWidget {
                             'SAVE',
                             style: TextStyle(
                               color: Theme.of(context).primaryColor,
-                              fontFamily: 'Trajan Pro',
+                              fontFamily: 'Montserrat',
                               letterSpacing: 1,
                             ),
                           ),

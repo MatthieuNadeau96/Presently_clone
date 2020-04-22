@@ -23,10 +23,7 @@ class DayCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 'April 15 2020',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context).textTheme.title,
               ),
               SizedBox(height: 6),
               Text(
