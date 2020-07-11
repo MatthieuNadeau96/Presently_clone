@@ -58,11 +58,41 @@ class MyHomePage extends StatelessWidget {
         ],
       ),
       backgroundColor: Theme.of(context).primaryColor,
-      body: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (BuildContext context, int index) {
-            return DayCard();
-          }),
+      body: Container(
+        child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return Container(
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          width: 2,
+                          height: 50,
+                          color: Colors.black,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 10, right: 10),
+                          padding: EdgeInsets.all(7),
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        ),
+                        Container(
+                          width: 2,
+                          height: 50,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                    DayCard(),
+                  ],
+                ),
+              );
+            }),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(
