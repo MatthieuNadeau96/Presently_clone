@@ -11,13 +11,32 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'LibreBaskerville',
         primaryColor: Color(0xffDBD1C7),
         accentColor: Colors.black,
         primaryTextTheme: TextTheme(
           title: TextStyle(
             color: Color(0xff89827C),
           ),
+        ),
+        textTheme: TextTheme(
+          display1: TextStyle(
+            fontSize: 30,
+            fontFamily: 'Caudex',
+            fontWeight: FontWeight.bold,
+            color: Color(0xffDBD1C7),
+          ),
+          display2: TextStyle(
+            fontSize: 30,
+            fontFamily: 'Caudex',
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+          title: TextStyle(
+            fontFamily: 'Caudex',
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+          body1: TextStyle(),
         ),
       ),
       home: MyHomePage(),
@@ -43,10 +62,7 @@ class MyHomePage extends StatelessWidget {
         title: Text(
           'Presently',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Theme.of(context).primaryColor,
-            fontSize: 30,
-          ),
+          style: Theme.of(context).textTheme.display1,
         ),
         centerTitle: true,
         actions: <Widget>[

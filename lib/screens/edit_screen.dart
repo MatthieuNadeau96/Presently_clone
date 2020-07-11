@@ -8,8 +8,8 @@ class EditScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.only(
           top: MediaQuery.of(context).size.height * 0.10,
-          left: 30,
-          right: 30,
+          left: MediaQuery.of(context).size.width * 0.04,
+          right: MediaQuery.of(context).size.width * 0.04,
           bottom: 0,
         ),
         child: Column(
@@ -24,19 +24,13 @@ class EditScreen extends StatelessWidget {
                   Container(
                     child: Text(
                       'Today',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.display2,
                     ),
                   ),
                   Container(
                     child: Text(
                       'I am grateful for',
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.display2,
                     ),
                   ),
                 ],
@@ -57,7 +51,9 @@ class EditScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         labelText: 'What are you grateful for?',
                         labelStyle: TextStyle(
+                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
+                          color: Color(0xff89827C),
                         ),
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -88,7 +84,10 @@ class EditScreen extends StatelessWidget {
                           child: Text(
                             'SAVE',
                             style: TextStyle(
-                                color: Theme.of(context).primaryColor),
+                              color: Theme.of(context).primaryColor,
+                              fontFamily: 'Montserrat',
+                              letterSpacing: 1,
+                            ),
                           ),
                           color: Colors.black,
                         ),
@@ -116,6 +115,10 @@ class EditScreen extends StatelessWidget {
                 child: Text(
                   '\"The root of joy is gratefulness\" \n David Steindl-Rast',
                   textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color(0xff89827C),
+                    // fontFamily: 'Trajan Pro',
+                  ),
                 ),
               ),
             ),
